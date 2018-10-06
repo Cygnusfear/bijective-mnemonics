@@ -119,11 +119,11 @@ textarea {
 
 ### Enter Mnemonic Phrase:
 
-<input type="text" id="mnemonicinput" value="aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book">
+<textarea type="text" id="mnemonicinput" rows="4" value="aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book"></textarea>
 
 ### Corresponding Hexadecimal Number
 
-<textarea type="text" id="hexoutput" rows="4" readonly></textarea>
+<input type="text" id="hexoutput" readonly>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>

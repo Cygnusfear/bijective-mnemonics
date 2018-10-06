@@ -26,7 +26,6 @@ function hex_str_to_bigint(hex_str) {
     return result;
 }
 
-
 function get_different_base_indices(x, base) {
     var digits = [];
     while (x > 0) {
@@ -49,6 +48,9 @@ function addr_to_mnemonic(addr) {
 }
 
 function mnemonic_to_addr(mnemonic_str) {
+    if (!mnemonic_str) {
+        throw new Error('Invalid input');
+    }
     let words_ = mnemonic_str.split(' ').filter((val) => val);
     words_ = words_.reverse();
     let number = bigInt(0);

@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+In cryptography and related fields, public and private keys consist of >40
+hexadecimal digits, such as  `0x85b463314d8177fdb2a590c6af321699e2d718cc`.
+When dealing with a lot of these, for example when trying to read transaction
+details in a block of a blockchain, discerning addresses can become a bit of a
+hassle. As a demonstration, you are invited to filter out keys that appear 2 or
+more times in the following list:
 
-You can use the [editor on GitHub](https://github.com/osolmaz/bijective-mnemonics/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+0x16b0c89b6c987fc1687c6c5d5f19f9f0543f2ba7
+0x85b463314d8177fdb2a590c6af321699e2d718cc
+0xf054e6f785cbf6ca764d0bad1dcf47e12c070484
+0xbfdfaef8656a810adb72d9ee2b30bd0e15aa0d5f
+0x570436a62b6e5d1b54ec3d3ab9c21a979bf8dc2b
+0xba6cf19a5fc9277f4e976b41a7789adc8cd1fefd
+0x466b5222d47b8533f15a32ef9f82a3a9fd6f8b2f
+0xbfdfaef8656a810adb72d9ee2b30bd0e15aa0d5f
+0x077be25134037a10160e6f4bded4c17a4765508a
+0x65ab6b69c47815b6bd89327ab67e19675212ad4a
+0x16b0c89b6c987fc1687c6c5d5f19f9f0543f2ba7
+0x20f81043f12dde4440ecc0b35156a1275f181653
+0xba6cf19a5fc9277f4e976b41a7789adc8cd1fefd
+0x077be25134037a10160e6f4bded4c17a4765508a
+0x65ab6b69c47815b6bd89327ab67e19675212ad4a
+0xbfdfaef8656a810adb72d9ee2b30bd0e15aa0d5f
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/osolmaz/bijective-mnemonics/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+It gives you a headache, doesn't it?

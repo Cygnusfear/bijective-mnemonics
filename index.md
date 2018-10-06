@@ -89,6 +89,17 @@ the first and last words of corresponding mnemonic phrases:
 This trades off uniqueness against readability and memorability, and introduces
 the risk of colliding phrases.
 
+<style>
+input {
+    width: 100%;
+    text-align: center;
+    font-size: 110%;
+    font-size: 110%;
+    font-family: monospace;
+    padding: 1ex;
+}
+</style>
+
 <input type="text" id="hexinput" value="0x85b463314d8177fdb2a590c6af321699e2d718cc">
 
 <input type="text" id="mnemonicinput" readonly>

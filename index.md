@@ -98,28 +98,58 @@ input, textarea {
     font-family: monospace;
     padding: 1ex;
 }
+textarea {
+    resize: horizontal;
+    vertical-align: middle;
+}
 </style>
+
+## Hex to Mnemonic
+
+### Enter Hexadecimal Number:
 
 <input type="text" id="hexinput" value="0x85b463314d8177fdb2a590c6af321699e2d718cc">
 
-<textarea type="text" id="mnemonicinput" rows="4" readonly></textarea>
+### Corresponding Bijective Mnemonic Phrase:
+
+<textarea type="text" id="mnemonicoutput" rows="4" readonly></textarea>
+
+
+## Mnemonic to Hex
+
+### Enter Mnemonic Phrase:
+
+<input type="text" id="mnemonicinput" value="aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book">
+
+### Corresponding Hexadecimal Number
+
+<textarea type="text" id="hexoutput" rows="4" readonly></textarea>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
 <script src="{{ '/BigInteger.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 <script src="{{ '/mnemonic.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
 <script>
-function update_boxes() {
+function update_hex_to_mnemonic() {
    var hex_str = $("#hexinput").val();
    var mnemonic_phrase = addr_to_mnemonic(hex_str);
-
-   $("#mnemonicinput").val(mnemonic_phrase);
+   $("#mnemonicoutput").val(mnemonic_phrase);
 }
 
-$("#hexinput").on("keyup change load", function() {update_boxes();});
+function update_mnemonic_to_hex() {
+   var mnemonic_str = $("#mnemonicinput").val();
+   var mnemonic_phrase = mnemonic_to_addr(mnemonic_str);
+   $("#hexoutput").val(mnemonic_phrase);
+}
+
+
+$("#hexinput").on("keyup change load", function() {update_hex_to_mnemonic();});
+$("#mnemonicinput").on("keyup change load", function() {update_mnemonic_to_hex();});
 
 $(document).ready(function(){
-  update_boxes();
+  update_hex_to_mnemonic();
+  update_mnemonic_to_hex();
 });
 
 </script>

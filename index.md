@@ -102,7 +102,7 @@ input, textarea {
 
 <input type="text" id="hexinput" value="0x85b463314d8177fdb2a590c6af321699e2d718cc">
 
-<textarea type="text" id="mnemonicinput" rows="4" readonly>
+<textarea type="text" id="mnemonicinput" rows="4" readonly></textarea>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
 <script src="{{ '/BigInteger.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>

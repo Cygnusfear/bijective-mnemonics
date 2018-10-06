@@ -89,6 +89,9 @@ the first and last words of corresponding mnemonic phrases:
 This trades off uniqueness against readability and memorability, and introduces
 the risk of colliding phrases.
 
+Below are interactive boxes that convert
+hexadecimal numbers to their mnemonic representations, and vice versa.
+
 <style>
 input, textarea {
     width: 100%;
@@ -106,7 +109,7 @@ textarea {
 
 ## Hex to Mnemonic
 
-### Enter Hexadecimal Number:
+### Enter Hexadecimal Number (Public key, address, etc.):
 
 <input type="text" id="hexinput" value="0x85b463314d8177fdb2a590c6af321699e2d718cc">
 
@@ -117,13 +120,22 @@ textarea {
 
 ## Mnemonic to Hex
 
-### Enter Mnemonic Phrase:
+### Enter Bijective Mnemonic Phrase:
 
 <textarea type="text" id="mnemonicinput" rows="4">aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book</textarea>
 
 ### Corresponding Hexadecimal Number:
 
 <input type="text" id="hexoutput" readonly>
+
+## Conclusion
+
+Bijective mnemonic phrases are a proposed scheme to increase readability and
+memorability of hexadecimal numbers. Mnemonic phrases and corresponding numbers
+can be converted to each other very quickly owing to the invertability of the
+underlying map.
+Truncated versions of phrases can make humans discern keys and
+addresses more easily.
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
@@ -161,18 +173,4 @@ $(document).ready(function(){
 });
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

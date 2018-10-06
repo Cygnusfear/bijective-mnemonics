@@ -89,20 +89,20 @@ the first and last words of corresponding mnemonic phrases:
 This trades off uniqueness against readability and memorability, and introduces
 the risk of colliding phrases.
 
-<input type="text" id="hexinput" value="">
+<input type="text" id="hexinput" value="0x85b463314d8177fdb2a590c6af321699e2d718cc">
 
 <input type="text" id="mnemonicinput" readonly>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
-<script src="{{ 'BigInteger.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
-<script src="{{ 'mnemonic.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ '/BigInteger.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ '/mnemonic.js' | prepend: site.baseurl | prepend: site.url }}"></script>
 
+<script>
 function update_boxes() {
-   var s0 = Number($("#s0input").val());
-   var e1 = Number($("#e1input").val());
+   var hex_str = $("#hexinput").val();
+   var mnemonic_phrase = addr_to_mnemonic(hex_str);
 
-
-   $("#mnemonicinput").val(e2suff);
+   $("#mnemonicinput").val(mnemonic_phrase);
 }
 
 $("#hexinput").on("keyup change load", function() {update_boxes();});

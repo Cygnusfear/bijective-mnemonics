@@ -9,7 +9,7 @@ for (word of words) {
     count += 1;
 }
 
-var bigInt = require('./BigInteger.min.js');
+// var bigInt = require('./BigInteger.min.js');
 
 function reverse(str){
   return str.split("").reverse().join("");
@@ -39,6 +39,9 @@ function get_different_base_indices(x, base) {
 }
 
 function addr_to_mnemonic(addr) {
+    if (addr.slice(0,2) !== "0x") {
+        throw new Error('Invalid input');
+    }
     let number = hex_str_to_bigint(addr);
     let indices = get_different_base_indices(number, 2048);
     result = indices.map(i=>words[i]).join(" ");
@@ -62,6 +65,6 @@ function mnemonic_to_addr(mnemonic_str) {
     return result;
 }
 
-console.log(addr_to_mnemonic('0x85b463314d8177fdb2a590c6af321699e2d718cc'));
-console.log(mnemonic_to_addr('aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book'));
+// console.log(addr_to_mnemonic('0x85b463314d8177fdb2a590c6af321699e2d718cc'));
+// console.log(mnemonic_to_addr('aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book'));
 

@@ -121,7 +121,7 @@ textarea {
 
 <textarea type="text" id="mnemonicinput" rows="4">aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book</textarea>
 
-### Corresponding Hexadecimal Number
+### Corresponding Hexadecimal Number:
 
 <input type="text" id="hexoutput" readonly>
 

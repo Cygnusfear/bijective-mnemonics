@@ -119,7 +119,7 @@ textarea {
 
 ### Enter Mnemonic Phrase:
 
-<textarea type="text" id="mnemonicinput" rows="4" value="aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book"></textarea>
+<textarea type="text" id="mnemonicinput" rows="4">aerobic home shoe below scheme that rent pitch mail profit goddess hat vapor fragile book</textarea>
 
 ### Corresponding Hexadecimal Number
 
@@ -133,14 +133,22 @@ textarea {
 <script>
 function update_hex_to_mnemonic() {
    var hex_str = $("#hexinput").val();
-   var mnemonic_phrase = addr_to_mnemonic(hex_str);
-   $("#mnemonicoutput").val(mnemonic_phrase);
+   try {
+      var mnemonic_phrase = addr_to_mnemonic(hex_str);
+      $("#mnemonicoutput").val(mnemonic_phrase);
+   } catch {
+      $("#mnemonicoutput").val('Invalid input');
+   }
 }
 
 function update_mnemonic_to_hex() {
    var mnemonic_str = $("#mnemonicinput").val();
-   var mnemonic_phrase = mnemonic_to_addr(mnemonic_str);
-   $("#hexoutput").val(mnemonic_phrase);
+   try {
+       var mnemonic_phrase = mnemonic_to_addr(mnemonic_str);
+       $("#hexoutput").val(mnemonic_phrase);
+   } catch {
+       $("#hexoutput").val('Invalid input');
+   }
 }
 
 
